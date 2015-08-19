@@ -6,7 +6,7 @@
     <description>PAR Excellence Notification Plugin</description>
     <license>Apache 2.0 License</license>
     <keywords></keywords>
-    <js-module src="www/notification.js" name="Notification">
+    <js-module src="www/js/notification.js" name="Notification">
         <clobbers target="cordova.plugins.notification" />
     </js-module>    
     <platform name="android">	
@@ -15,6 +15,8 @@
                 <param name="android-package" value="com.parexcellencesystems.notification.NotificationPlugin"/>
             </feature>
         </config-file>
-        <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />      
+        <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />
+        <source-file src="src/android/DeviceBootReceiver.java" target-dir="src/com/parexcellencesystems/notification" />
+        <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />
     </platform>
 </plugin>
