@@ -16,7 +16,5 @@
             </feature>
         </config-file>
         <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />
-        <source-file src="src/android/DeviceBootReceiver.java" target-dir="src/com/parexcellencesystems/notification" />
-        <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />
     </platform>
 </plugin>
