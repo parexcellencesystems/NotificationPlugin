@@ -16,7 +16,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
 
             // After the device is rebooted we must restart the receive notifications job
             //TODO the api url, auth header, and interval will be stored off somewhere
-            ReceiveNotificationsJob.start(context, "http://drew/parex.mobile/api", "", 10000);
+            NotificationPlugin.start(context, "http://drew/parex.mobile/api", "", 10000);
             //ReceiveNotificationsJob.execute();
 /*
 

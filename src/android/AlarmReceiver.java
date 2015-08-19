@@ -53,7 +53,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         //Toast.makeText(context, "I'm running!!!!!!!!!!!!!", Toast.LENGTH_LONG).show();
         //ReceiveNotificationsJob job = new ReceiveNotificationsJob();
         //job.execute();
-        ReceiveNotificationsJob.run();
+        NotificationPlugin.run();
     }
 
 
