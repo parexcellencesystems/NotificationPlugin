@@ -80,36 +80,34 @@ public class NotificationPlugin extends CordovaPlugin {
 
 
         try {
-            switch(action) {
-                case ACTION_START: {
-                    //this.cordova.getActivity().startActivity(new Intent(Intent.ACTION_START.ACTION_EDIT ACTION_START));
+        	
+        	if(action.equals(ACTION_START)) {
+                //this.cordova.getActivity().startActivity(new Intent(Intent.ACTION_START.ACTION_EDIT ACTION_START));
 
-                    JSONObject jsonArgs = args.getJSONObject(0);
+                JSONObject jsonArgs = args.getJSONObject(0);
 
-                    //TODO store the api url, auth header, and interval off somewhere
-                    _context = this.cordova.getActivity();
-                    _apiUrl = jsonArgs.getString("apiUrl");
-                    _authorizationHeader = jsonArgs.getString("authorizationHeader");
-                    _interval = jsonArgs.getLong("intervalMillis");
+                //TODO store the api url, auth header, and interval off somewhere
+                _context = this.cordova.getActivity();
+                _apiUrl = jsonArgs.getString("apiUrl");
+                _authorizationHeader = jsonArgs.getString("authorizationHeader");
+                _interval = jsonArgs.getLong("intervalMillis");
 
-                    start(_context, _apiUrl, _authorizationHeader, _interval);
+                start(_context, _apiUrl, _authorizationHeader, _interval);
 
-                    callbackContext.success();
-                    return true;
-                }
-                case ACTION_STOP: {
-                    //this.cordova.getActivity()..stop.startActivity(new Intent(ACTION_STOP));
-                    stop();
-                    callbackContext.success();
-                    return true;
-                }
-                default: {
-                    callbackContext.error("Invalid action");
-                    return false;
-                }
-
-
+                callbackContext.success();
+                return true;
+            } else if(action.equals(ACTION_STOP)) {
+                //this.cordova.getActivity()..stop.startActivity(new Intent(ACTION_STOP));
+                stop();
+                callbackContext.success();
+                return true;
+            } else {
+                callbackContext.error("Invalid action");
+                return false;
             }
+
+
+
         } catch(Exception e) {
             callbackContext.error(e.getMessage());
             return false;
