@@ -2,11 +2,11 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.parexcellencesystems.notification"
     version="1.0.0">
-    <name>Notification</name>
+    <name>NotificationPlugin</name>
     <description>PAR Excellence Notification Plugin</description>
     <license>Apache 2.0 License</license>
     <keywords></keywords>
-    <js-module src="www/js/notification.js" name="Notification">
+    <js-module src="www/js/notification.js" name="NotificationPlugin">
         <clobbers target="cordova.plugins.notification" />
     </js-module>    
     <platform name="android">
@@ -46,7 +46,7 @@
 
 		
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Notification">
+            <feature name="NotificationPlugin">
                 <param name="android-package" value="com.parexcellencesystems.notification.NotificationPlugin" />
             </feature>
         </config-file>		
