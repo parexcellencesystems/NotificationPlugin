@@ -74,7 +74,7 @@ public class NotificationPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
 
-        Toast.makeText(_context, action, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(_context, action, Toast.LENGTH_SHORT).show();
 
 
 

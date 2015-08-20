@@ -4,7 +4,7 @@ var notification = {
             successCallback,
             errorCallback,
             'NotificationPlugin',
-            'ACTION_START', 
+            'start', 
             [{
                 "apiUrl": apiUrl,
                 "authorizationHeader": authorizationHeader,
@@ -18,7 +18,7 @@ var notification = {
             successCallback,
             errorCallback,
             'NotificationPlugin',
-            'ACTION_STOP'
+            'stop'
         );
     }
 }
