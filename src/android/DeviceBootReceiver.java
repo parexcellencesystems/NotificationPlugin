@@ -16,7 +16,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
 
             // After the device is rebooted we must restart the receive notifications job
             //TODO the api url, auth header, and interval will be stored off somewhere
-            NotificationPlugin.start(context, "http://drew/parex.mobile/api", "", 10000);
+            
             //ReceiveNotificationsJob.execute();
 /*
 
@@ -29,6 +29,18 @@ public class DeviceBootReceiver extends BroadcastReceiver {
             manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
 
             Toast.makeText(context, "Alarm Set", Toast.LENGTH_SHORT).show();*/
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	//TODO NotificationPlugin.getInstance().start(context, "http://drew/parex.mobile/api", "", 10000);
+        	
+        	//NotificationManager2.getInstance().start()
+        	
         }
     }
 }

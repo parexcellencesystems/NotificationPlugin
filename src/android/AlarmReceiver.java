@@ -1,6 +1,6 @@
 package com.parexcellencesystems.notification;
 
-import android.app.Activity;
+//import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -53,7 +53,39 @@ public class AlarmReceiver extends BroadcastReceiver {
         //Toast.makeText(context, "I'm running!!!!!!!!!!!!!", Toast.LENGTH_LONG).show();
         //ReceiveNotificationsJob job = new ReceiveNotificationsJob();
         //job.execute();
-        NotificationPlugin.run();
+        
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	//TODO NotificationPlugin.getInstance().run();
+    	
+    	LocalNotificationManager.getInstance().run();
     }
 
 

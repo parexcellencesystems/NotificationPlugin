@@ -25,6 +25,7 @@
 		
         <source-file src="src/android/AlarmReceiver.java" target-dir="src/com/parexcellencesystems/notification" />
         <source-file src="src/android/DeviceBootReceiver.java" target-dir="src/com/parexcellencesystems/notification" />
+        <source-file src="src/android/LocalNotificationManager.java" target-dir="src/com/parexcellencesystems/notification" />
         <source-file src="src/android/NotificationPlugin.java" target-dir="src/com/parexcellencesystems/notification" />
 
 		
