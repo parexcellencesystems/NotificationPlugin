@@ -83,9 +83,10 @@ public class AlarmReceiver extends BroadcastReceiver {
     	
     	
     	
-    	//TODO NotificationPlugin.getInstance().run();
     	
-    	LocalNotificationManager.getInstance().run();
+    	
+    	//LocalNotificationManager.getInstance().run();
+    	LocalNotificationManager.getInstance().run(context);
     }
 
 

@@ -27,6 +27,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+//import com.parexcellencesystems.test.CordovaApp;
+
 
 
 /*import java.io.BufferedReader;
@@ -67,8 +69,6 @@ public class NotificationPlugin extends CordovaPlugin {
 	   
 	   
 
-    public static final String ACTION_START = "start";
-    public static final String ACTION_STOP = "stop";
 
 
 
@@ -113,7 +113,7 @@ public class NotificationPlugin extends CordovaPlugin {
 
         try {
         	
-        	if(action.equals(ACTION_START)) {
+        	if(action.equals(Constants.ACTION_START)) {
                 //this.cordova.getActivity().startActivity(new Intent(Intent.ACTION_START.ACTION_EDIT ACTION_START));
 
                 JSONObject jsonArgs = args.getJSONObject(0);
@@ -125,19 +125,22 @@ public class NotificationPlugin extends CordovaPlugin {
                 _interval = ;
 */
                 LocalNotificationManager.getInstance().start(
-                	this.cordova, 
-                	jsonArgs.getString("apiUrl"), 
-                	jsonArgs.getString("authorizationHeader"), 
-                	jsonArgs.getLong("intervalMillis"),
-                	jsonArgs.getString("title"),
-                	jsonArgs.getString("icon")
+                	//this.cordova,
+                	this.cordova.getActivity().getApplicationContext(),
+                	jsonArgs.getString(Constants.SETTING_API_URL), 
+                	jsonArgs.getString(Constants.SETTING_AUTH_HEADER), 
+                	jsonArgs.getLong(Constants.SETTING_INTERVAL),
+                	jsonArgs.getString(Constants.SETTING_TITLE),
+                	jsonArgs.getString(Constants.SETTING_ICON)
                 );
 
                 callbackContext.success();
                 return true;
-            } else if(action.equals(ACTION_STOP)) {
+            } else if(action.equals(Constants.ACTION_STOP)) {
                 //this.cordova.getActivity()..stop.startActivity(new Intent(ACTION_STOP));
-                LocalNotificationManager.getInstance().stop();
+                //LocalNotificationManager.getInstance().stop(this.cordova);
+                LocalNotificationManager.getInstance().stop(this.cordova.getActivity().getApplicationContext());
+                
                 callbackContext.success();
                 return true;
             } else {
