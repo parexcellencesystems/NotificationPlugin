@@ -1,4 +1,4 @@
-cordova.define("com.parexcellencesystems.notification.NotificationPlugin", function(require, exports, module) { var notification = {
+var notification = {
 	start: function(apiUrl, authorizationHeader, intervalMillis, title, icon, successCallback, errorCallback) {
 		cordova.exec(
 			successCallback,
@@ -20,11 +20,9 @@ cordova.define("com.parexcellencesystems.notification.NotificationPlugin", funct
 			successCallback,
 			errorCallback,
 			'NotificationPlugin',
-			'stop',
-			[]
+			'stop'
 		);
 	}
 }
 
 module.exports = notification;
-});
