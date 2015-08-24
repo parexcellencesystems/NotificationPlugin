@@ -6,7 +6,7 @@ var notification = {
 			'NotificationPlugin',
 			'start', 
 			[{
-				"apiUrl": apiUrl,
+				"getUrl": getUrl,
 				"authorizationHeader": authorizationHeader,
 				"intervalMillis": intervalMillis,
 				"title": title,
