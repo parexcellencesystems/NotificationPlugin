@@ -20,7 +20,8 @@ var notification = {
 			successCallback,
 			errorCallback,
 			'NotificationPlugin',
-			'stop'
+			'stop',
+			[]
 		);
 	}
 }
