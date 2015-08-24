@@ -1,5 +1,5 @@
 var notification = {
-	start: function(apiUrl, authorizationHeader, intervalMillis, title, icon, successCallback, errorCallback) {
+	start: function(getUrl, authorizationHeader, intervalMillis, title, icon, successCallback, errorCallback) {
 		cordova.exec(
 			successCallback,
 			errorCallback,
